@@ -76,7 +76,7 @@ imageio==2.9.0
 imagesize==1.2.0
 imgaug==0.2.9
 importlib-metadata==1.7.0
-imutils==1.0.1
+imutils==0.5.3
 iniconfig==0.0.0
 intervaltree==3.0.2
 ipykernel==5.3.4
