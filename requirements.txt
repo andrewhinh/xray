@@ -1,7 +1,7 @@
 requests==2.22.0
 Pillow==7.1.2
 matplotlib==3.2.1
-torch==1.4.0
+cpu/torch-1.4.0%2Bcpu-cp38-cp38-linux_x86_64.whl
 scipy==1.4.1
 numpy==1.19.1
 fastprogress==0.2.5
