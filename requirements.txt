@@ -1,7 +1,7 @@
 requests==2.22.0
 Pillow==7.1.2
 matplotlib==3.2.1
-https://download.pytorch.org/whl/cpu/torch-1.4.0%2Bcpu-cp36-cp36m-linux_x86_64.whl
+https://download.pytorch.org/whl/cpu/torch-1.4.0-cp36-none-macosx_10_9_x86_64.whl
 numpy==1.19.1
 fastprogress==0.2.5
 fastai==1.0.61
