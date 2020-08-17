@@ -49,10 +49,6 @@ async def download_file(url, dest):
 
 async def setup_learner():
     await download_file(export_file_url, path / export_file_name)
-    from functools import partial
-    import pickle
-    pickle.load = partial(pickle.load, encoding="latin1")
-    pickle.Unpickler = partial(pickle.Unpickler, encoding="latin1")
     try:
         learn = load_learner(path, export_file_name)
         return learn
