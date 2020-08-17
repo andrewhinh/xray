@@ -4,7 +4,6 @@ Pillow==7.1.2
 matplotlib==3.2.1
 torch==1.4.0
 scipy==1.4.1
-pandas==0.25.0
 numpy==1.19.1
 fastprogress==0.2.5
 fastai==1.0.61
