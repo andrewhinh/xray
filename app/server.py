@@ -36,7 +36,7 @@ app = Starlette()
 app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_headers=['X-Requested-With', 'Content-Type'])
 app.mount('/static', StaticFiles(directory='app/static'))
 
-
+"""
 async def download_file(url, dest):
     if dest.exists(): return
     async with aiohttp.ClientSession() as session:
@@ -44,7 +44,12 @@ async def download_file(url, dest):
             data = await response.read()
             with open(dest, 'wb') as f:
                 f.write(data)
-
+"""
+import urllib2
+async def download_file(url, dest):
+    mp3file = urllib2.urlopen(url)
+    with open(dest,'wb') as output:
+  	output.write(mp3file.read())
 
 async def setup_learner():
     print(export_file_url, path / export_file_name)
