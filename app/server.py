@@ -9,8 +9,8 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=1ixi08D21By7_gY1QEOwXHg-1gAf3CDKT' #non-rand
-export_file_name = 'export.pkl'
+export_file_url = 'https://drive.google.com/uc?export=download&id=15V6P0q-nK9LJevvD8KIqOrMwi065v6Mh'
+export_file_name = 'export-rand.pkl'
 
 classes=["No_Finding", 
         "Enlarged_Cardiomediastinum", 
@@ -28,7 +28,8 @@ classes=["No_Finding",
         "Support_Devices",
         "Viral_Pneumonia",
         "Bacterial_Pneumonia",
-        "Covid19"]
+        "Covid19",
+	"Other"]
 path = Path(__file__).parent
 
 app = Starlette()
