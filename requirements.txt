@@ -4,3 +4,4 @@ aiohttp==3.6.2
 starlette==0.13.8
 uvicorn==0.11.8
 aiofiles==0.5.0
+urllib2==1.0.0
