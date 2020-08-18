@@ -53,6 +53,7 @@ docutils==0.16
 empy==3.3.4
 entrypoints==0.3
 et-xmlfile==1.0.1
+fastai==1.0.61 
 fastcache==1.1.0
 fastprogress==0.2.5
 filelock==3.0.12
