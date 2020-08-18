@@ -1,1 +1,2 @@
 fastai==1.0.61 
+python-multipart==0.0.5
