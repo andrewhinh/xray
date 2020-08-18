@@ -9,11 +9,8 @@ from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
-import os 
-import requests
-Port = int(os.environ.get('PORT', 50000))
 
-export_file_url = 'https://www.dropbox.com/s/vpvj7u0x4tb8esp/export-rand.pkl?dl=1'
+export_file_url = 'https://drive.google.com/uc?export=download&id=15V6P0q-nK9LJevvD8KIqOrMwi065v6Mh'
 export_file_name = 'export-rand.pkl'
 
 classes=["No_Finding", 
@@ -84,15 +81,21 @@ async def analyze(request):
     thresh=0.53
     prediction = learn.predict(img, thresh=thresh)
     labels = str(prediction[0]).split(';')
-    probs = []
-    for i in prediction[2]:
-        if float(i)>thresh:
-            probs.append(float(i))
-    answer = dict(zip(labels, probs))
-    sort_answer = sorted(answer.items(), key=lambda x: x[1], reverse=True)
-    answer = []
-    for label, prob in sort_answer:
-        answer.append(str(' '+label.replace('_', ' ')+': '+str(round(prob*100, 1))+'%'+" confident"))
+    if labels==['']:
+        answer="Other"
+    else:
+        probs = []
+        for i in prediction[2]:
+            if float(i)>thresh:
+                probs.append(float(i))
+        answer = dict(zip(labels, probs))
+        sort_answer = sorted(answer.items(), key=lambda x: x[1], reverse=True)
+        answer = []
+        for label, prob in sort_answer:
+            if label=="Other":
+                answer.append(str(' '+label))
+            else:
+                answer.append(str(' '+label.replace('_', ' ')+': '+str(round(prob*100, 1))+'%'+" confident"))
 
     return JSONResponse({
 		'result' : answer
@@ -101,4 +104,4 @@ async def analyze(request):
 
 if __name__ == '__main__':
     if 'serve' in sys.argv:
-        uvicorn.run(app=app, host='0.0.0.0', port=Port, log_level="info")
+        uvicorn.run(app=app, host='0.0.0.0', port=5000, log_level="info")
