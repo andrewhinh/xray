@@ -11,6 +11,8 @@ RUN pip3 install fastai==1.0.61
 
 RUN pip3 install aiofiles==0.5.0
 
+RUN pip3 install joblib==0.16.0
+
 RUN pip3 install --no-deps -r requirements.txt
 
 COPY app app/
