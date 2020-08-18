@@ -1,10 +1,14 @@
 aiofiles==0.4.0
 aiohttp==3.6.2
 asyncio==3.4.3
+torch==1.4.0
 fastai==1.0.61
-numpy==1.16.3
-pillow~=7.1.0
+numpy==1.19.1
+pillow~=7.1.2
 python-multipart==0.0.5
 starlette==0.13.8
 uvicorn==0.11.8
-requests==2.24.0
+requests==2.22.0
+matplotlib==3.2.1
+scipy==1.4.1
+fastprogress==0.2.5
