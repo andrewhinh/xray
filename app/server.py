@@ -13,7 +13,7 @@ import os
 import requests
 Port = int(os.environ.get('PORT', 50000))
 
-export_file_url = 'https://drive.google.com/file/d/15V6P0q-nK9LJevvD8KIqOrMwi065v6Mh/view?usp=sharing'
+export_file_url = 'https://www.dropbox.com/s/vpvj7u0x4tb8esp/export-rand.pkl?dl=1'
 export_file_name = 'export-rand.pkl'
 
 classes=["No_Finding", 
