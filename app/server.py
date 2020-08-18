@@ -9,7 +9,6 @@ from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
-import joblib
 
 export_file_url = 'https://drive.google.com/uc?export=download&id=15V6P0q-nK9LJevvD8KIqOrMwi065v6Mh'
 export_file_name = 'export-rand.pkl'
@@ -47,19 +46,10 @@ async def download_file(url, dest):
             with open(dest, 'wb') as f:
                 f.write(data)
 
-def unpickle(filename):
-    f = open(filename, "rb")
-    d = cPickle.load(f)
-    f.close()
-    return d
-
 async def setup_learner():
     await download_file(export_file_url, path / export_file_name)
     try:
-        f = open(path/export_file_name, "rb")
-        learn = cPickle.load(f)
-        f.close()
-        #learn = load_learner(path, export_file_name)
+        learn = load_learner(path, export_file_name)
         return learn
     except RuntimeError as e:
         if len(e.args) > 0 and 'CPU-only machine' in e.args[0]:
