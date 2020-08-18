@@ -51,7 +51,7 @@ async def download_file(url, dest):
 async def setup_learner():
     await download_file(export_file_url, path / export_file_name)
     try:
-	learn = joblib.load(open(path/export_file_name, 'rb'))
+        learn = joblib.load(open(path/export_file_name, 'rb'))
         #learn = load_learner(path, export_file_name)
         return learn
     except RuntimeError as e:
