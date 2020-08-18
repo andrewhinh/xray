@@ -274,4 +274,3 @@ zipp==3.1.0
 zope.event==4.4
 zope.interface==4.7.1
 starlette==0.13.8
-python-multipart==0.0.5
