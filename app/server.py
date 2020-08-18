@@ -10,7 +10,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=15V6P0q-nK9LJevvD8KIqOrMwi065v6Mh'
+export_file_url = 'https://www.dropbox.com/s/vpvj7u0x4tb8esp/export-rand.pkl?dl=1'
 export_file_name = 'export-rand.pkl'
 
 classes=["No_Finding", 
