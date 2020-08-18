@@ -5,13 +5,7 @@ RUN apt-get update && apt-get install -y git python3-dev gcc \
 
 COPY requirements.txt .
 
-RUN pip3 install aiohttp==3.6.2
-
-RUN pip3 install fastai==1.0.61
-
-RUN pip3 install aiofiles==0.5.0
-
-RUN pip3 install joblib==0.16.0
+RUN pip3 install aiohttp==3.6.2, fastai==1.0.61, aiofiles==0.5.0
 
 RUN pip3 install --no-deps -r requirements.txt
 
