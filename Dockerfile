@@ -15,4 +15,4 @@ RUN python3 app/server.py
 
 EXPOSE 5000
 
-CMD ["python", "app/server.py", "serve"]
+CMD ["python3", "app/server.py", "serve"]
