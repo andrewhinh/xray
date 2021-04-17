@@ -1,4 +1,4 @@
-# [Chest Xray Classifier](https://chexray-ncfk.onrender.com/) deployed on [Render](https://render.com).
+# [Chest Xray Classifier](https://chexray-ncfk.onrender.com/) deployed on Render.
 
 Can predict if one or more of 18 different diseases are present in a patient from a chest xray. 
 
